@@ -26,11 +26,7 @@ module FunWithStrings
       anagram_groups_hash[sorted_word] ||= Array.new
       anagram_groups_hash[sorted_word] << word
     end
-    anagram_groups_array = Array.new
-    anagram_groups_hash.each do |group, value|
-      anagram_groups_array << value
-    end
-    return anagram_groups_array
+    return anagram_groups_hash.values
   end
 end
 
